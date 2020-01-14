@@ -109,6 +109,10 @@
       <Project>{644F23D0-7F6F-4BA1-AAF5-7C59E2E237EE}</Project>
       <Name>RealState.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RealState.IDomain\RealState.IDomain.csproj">
+      <Project>{FA8772B3-6011-45A8-86F9-24413D5D19F2}</Project>
+      <Name>RealState.IDomain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RealState.Model\RealState.Model.csproj">
       <Project>{65FEBB5A-302C-4CDE-90C4-4F13AE101B3E}</Project>
       <Name>RealState.Model</Name>

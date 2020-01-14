@@ -1,6 +1,6 @@
 ﻿namespace RealState.Model.Common
 {
-    public class Person
+    public abstract class Person
     {
         public Person(string firstName, string firstSurname)
         {
@@ -23,6 +23,11 @@
 
                 return fullName.Trim();
             }
+        }        
+
+        public virtual string IntroduceHimself()
+        {
+            return "Hi. I'm " + FullName;
         }
     }
 }

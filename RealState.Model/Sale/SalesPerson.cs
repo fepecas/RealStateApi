@@ -11,5 +11,12 @@ namespace RealState.Model.Sale
         {
 
         }
+
+        public int SeniorityLevel { get; set; }
+
+        public override string IntroduceHimself()
+        {
+            return base.IntroduceHimself() + ". How can I help you?";
+        }
     }
 }
