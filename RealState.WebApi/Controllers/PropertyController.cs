@@ -1,7 +1,6 @@
 ﻿using RealState.Domain;
-using RealState.IDomain;
-using RealState.Model.Common;
-using RealState.Model.Sale;
+using RealState.Model.Enum;
+using RealState.Model.Property;
 using System.Threading;
 using System.Web.Http;
 
@@ -13,27 +12,28 @@ namespace RealState.WebApi.Controllers
         public PropertyController()
         {
             _projectManager = new ProjectManager();
+            _propertyManager = new PropertyManager();
         }
         #endregion Constructor
 
         #region Private Members
         private readonly ProjectManager _projectManager;
+        private readonly PropertyManager _propertyManager;
         #endregion Private Members
 
         #region Endpoints
         [HttpGet]
         public virtual IHttpActionResult Lookup(CancellationToken cancellationToken = default(CancellationToken))
         {
-            //var person = new Person("Ananda", "López");
-            var customer = new Customer("Mauro", "Repizo");
-            var salesMan = new SalesPerson("Felipe", "Rayo");
-
-            var x = customer.IntroduceHimself();
-            var y = salesMan.IntroduceHimself();
-
-
             var projects = _projectManager.GetAll();
             return Ok(projects);
+        }
+
+        [HttpGet]
+        public virtual IHttpActionResult Get([FromUri] int id, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var property = _propertyManager.GetById(id);
+            return Ok(property);
         }
         #endregion Endpoints
     }

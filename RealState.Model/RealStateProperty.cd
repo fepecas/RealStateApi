@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RealState.Model.Property.Apartment">
+    <Position X="3.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Property\Apartment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RealState.Model.Property.House">
+    <Position X="5.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Property\House.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RealState.Model.Property.Property">
+    <Position X="4.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAEAAAAAQAAAAgAAAAgAAACAACAAAAAAQAAAAAAAAI=</HashCode>
+      <FileName>Property\Property.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RealState.Model.Property.Room">
+    <Position X="6.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Property\Room.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RealState.Model.Property.Garage" Collapsed="true">
+    <Position X="8.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Property\Garage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RealState.Model.Property.Deposit" Collapsed="true">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Property\Deposit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RealState.Model.Property.Balcony" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Property\Balcony.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="RealState.Model.Enum.PropertyTypeEnum">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAQAAAAAA=</HashCode>
+      <FileName>Enum\PropertyEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RealState.Model.Enum.PropertyTypeOfferEnum">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enum\PropertyEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RealState.Model.Enum.PropertyRoomType">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAg=</HashCode>
+      <FileName>Enum\PropertyEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RealState.Model.Enum.PropertyFloor">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enum\PropertyEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
