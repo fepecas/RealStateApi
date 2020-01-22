@@ -57,11 +57,21 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="PaymentPlanManagerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RealState.Domain\RealState.Domain.csproj">
+      <Project>{644F23D0-7F6F-4BA1-AAF5-7C59E2E237EE}</Project>
+      <Name>RealState.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RealState.Model\RealState.Model.csproj">
+      <Project>{65FEBB5A-302C-4CDE-90C4-4F13AE101B3E}</Project>
+      <Name>RealState.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -2,6 +2,11 @@
 {
     public abstract class Person
     {
+        public Person()
+        {
+
+        }
+
         public Person(string firstName, string firstSurname)
         {
             FirstName = firstName;
