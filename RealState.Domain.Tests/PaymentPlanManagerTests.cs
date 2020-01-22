@@ -5,7 +5,7 @@ using RealState.Domain;
 using RealState.Model.PaymentPlan;
 using RealState.Model.Property;
 
-namespace RealState.WebApi.Tests
+namespace RealState.Domain.Tests
 {
     [TestClass]
     public class PaymentPlanManagerTests
