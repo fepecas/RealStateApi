@@ -43,6 +43,19 @@ namespace RealState.Domain
         private decimal CaculateCurrentYearTotalFee(PaymentPlanRequest plan)
         {
             var feesCurrentYear = plan.Fees.FindAll(f => f.CutoffDate.Year == DateTime.Now.Year);
+            var monthsLeft = feesCurrentYear.Count;
+            int monthsNumberFirstCut = 12;
+
+            if (monthsLeft < 6)
+            {
+                if (plan.Fees.Count < 12)
+                    monthsNumberFirstCut = plan.Fees.Count;
+
+                for (var i = monthsLeft; i < monthsNumberFirstCut; i++)
+                {
+                    feesCurrentYear.Add(plan.Fees[i]);
+                }
+            }
 
             return CalculateTotalFee(feesCurrentYear);
         }

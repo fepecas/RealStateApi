@@ -53,6 +53,13 @@ namespace RealState.Domain.Tests
             }
         }
 
+        [TestMethod]
+        public void PaymentPlanManager_Analyze_WhenInsufficientMonthsInYearToPayFees()
+        {
+            var plan = GetInsufficientMonthsInYearToPayFees();
+            var result = _paymentPlanManager.Analyze(plan);
+
+            Assert.IsTrue(result.IsApprovedByManager);
         }
         #endregion Tests
 
@@ -165,6 +172,44 @@ namespace RealState.Domain.Tests
                     new Fee { CutoffDate = new DateTime(2021, 10, 31), ExpectedValue = 150000 },
                     new Fee { CutoffDate = new DateTime(2021, 11, 30), ExpectedValue = 150000 },
                     new Fee { CutoffDate = new DateTime(2021, 12, 31), ExpectedValue = 10000000 }
+                }
+            };
+        }
+        private PaymentPlanRequest GetInsufficientMonthsInYearToPayFees()
+        {
+            return new PaymentPlanRequest
+            {
+                Apartment = new Apartment("1602")
+                {
+                    Price = 100000000
+                },
+                Fees = new List<Fee>
+                {
+                    new Fee { CutoffDate = new DateTime(2020, 8, 31), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2020, 9, 30), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2020, 10, 31), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2020, 11, 30), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2020, 12, 31), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2021, 1, 31), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2021, 2, 28), ExpectedValue = 3000000 },
+                    new Fee { CutoffDate = new DateTime(2021, 3, 31), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2021, 4, 30), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2021, 5, 31), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2021, 6, 30), ExpectedValue = 3000000 },
+                    new Fee { CutoffDate = new DateTime(2021, 7, 31), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2021, 8, 31), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2021, 9, 30), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2021, 10, 31), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2021, 11, 30), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2021, 12, 31), ExpectedValue = 1200000 },
+                    new Fee { CutoffDate = new DateTime(2022, 1, 31), ExpectedValue = 3000000 },
+                    new Fee { CutoffDate = new DateTime(2022, 2, 28), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2022, 3, 31), ExpectedValue = 3000000 },
+                    new Fee { CutoffDate = new DateTime(2022, 4, 30), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2022, 5, 31), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2022, 6, 30), ExpectedValue = 600000 },
+                    new Fee { CutoffDate = new DateTime(2022, 7, 31), ExpectedValue = 3000000 },
+                    new Fee { CutoffDate = new DateTime(2022, 8, 31), ExpectedValue = 3000000 }
                 }
             };
         }
