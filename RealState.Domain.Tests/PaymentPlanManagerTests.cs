@@ -36,11 +36,23 @@ namespace RealState.Domain.Tests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
         public void PaymentPlanManager_Analyze_WhenInsufficientAmountError()
         {
             var plan = GetInsufficientAmountPlan();
-            _paymentPlanManager.Analyze(plan);
+            try
+            {
+                _paymentPlanManager.Analyze(plan);
+                Assert.Fail();
+            }
+            catch (Exception e)
+            {
+                if (e.Message != "The plan doesn't sum at least the initial fee.")
+                {
+                    Assert.Fail();
+                }
+            }
+        }
+
         }
         #endregion Tests
 
