@@ -12,17 +12,17 @@ namespace RealState.WebApi.Controllers
 {
     public class BorrowingCapacityController : ApiController
     {
-        public BorrowingCapacityManager _borrowingCapacityManager { get; set; }
+        public BorrowingCapacityManager BorrowingCapacityManager { get; set; }
 
         public BorrowingCapacityController()
         {
-            _borrowingCapacityManager = new BorrowingCapacityManager();
+            BorrowingCapacityManager = new BorrowingCapacityManager();
         }
 
         [HttpPost]
-        public IHttpActionResult Analyze([FromBody] BorrowingCapacity sheet, CancellationToken cancellationToken = default(CancellationToken))
+        public IHttpActionResult Consult([FromBody] BorrowingCapacity sheet, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var response = _borrowingCapacity.Analyze(sheet);
+            var response = _borrowingCapacity.Consult(sheet);
             return Ok(response);
         }
     }

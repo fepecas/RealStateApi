@@ -1,10 +1,15 @@
-﻿using System;
+﻿using RealState.Model.BorrowingCapacity;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace RealState.Domain
 {
-    class Class1
+    class BorrowingCapacityManager
     {
+        public BorrowingCapacityResponse Consult(BorrowingCapacityRequest sheet)
+        {
+
+        }
     }
 }
