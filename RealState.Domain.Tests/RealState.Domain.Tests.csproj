@@ -54,6 +54,7 @@
     <Compile Include="PaymentPlanManagerTests.cs" />
     <Compile Include="ProjectDomainUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalesGoalManagerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

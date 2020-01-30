@@ -10,7 +10,7 @@ namespace RealState.Domain.Tests
     [TestClass]
     public class PaymentPlanManagerTests
     {
-        public PaymentPlanManager _paymentPlanManager { get; set; }
+        private PaymentPlanManager _paymentPlanManager { get; set; }
 
         public PaymentPlanManagerTests()
         {
