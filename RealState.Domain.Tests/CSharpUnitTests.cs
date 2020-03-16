@@ -58,6 +58,18 @@ namespace RealState.Domain.Tests
 
             Assert.IsFalse(MetIfCondition);
         }
+
+
+        [TestMethod]
+        public void CSharpNullCondition()
+        {
+            bool? condition = null;
+
+            if (condition.Value)
+                MetIfCondition = true;
+
+            Assert.IsFalse(MetIfCondition);
+        }
         #endregion Null Conditional
 
         #region Null Coalescing
@@ -117,6 +129,8 @@ namespace RealState.Domain.Tests
 
             var result1 = a ? b : c ? d : e;
             var result2 = a ? b : (c ? d : e); //It's evaluated from right to left
+
+            Assert.AreEqual(result1, result2);
         }
         #endregion Ternary Operator
 
